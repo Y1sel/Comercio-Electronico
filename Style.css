@@ -1,36 +1,214 @@
 body{
     background-color: #A9D9D0;
     font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
     min-height: 100vh;
     margin: 0;
 }
 
+/* ENCABEZADO */
 #encabezado{
     background-color: #038C7F;
     border-radius: 20px;
     margin: 20px;
     display: flex;
-    position: center;
     padding: 40px;
     justify-content: center;
     gap: 50px;
     align-items: center;
-
-    .foto{
-        border-radius: 120px;
-    }
-    
-    .titulo{
-        font-size: 3rem;
-        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-        color: #F2E7DC;
-    }
 }
 
-.titulosCuerpo{
-        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-        color: #F2E7DC;
+.foto{
+    border-radius: 120px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 4px solid rgba(255,255,255,0.7);
+}
+
+.titulo{
+    font-size: 3rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    color: #F2E7DC;
+}
+
+/* BLOQUE 2 COLUMNAS */
+.informacion {
+    background-color: darkgray;
+    width: 1000px;
+    min-height: 220px;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.sobreMi{
+    background-color: blueviolet;
+    width: 500px;
+    padding: 10px;
+    color: black;
+    border-radius: 15px;
+}
+
+.habilidades{
+    background-color: brown;
+    width: 500px;
+    padding: 10px;
+    color: black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: 0.2s;
+}
+
+/* TARJETAS (3 columnas) */
+.proyectos{
+    background-color: darkgray;
+    width: 1050px;
+    min-height: 220px;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.ventajasDesventajas{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0; 
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Estilo de encabezados */
+.ventajasDesventajas th {
+    background-color: #038C7F; 
+    color: #fff; 
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/* Estilo de celdas */
+.ventajasDesventajas td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ccc; 
+}
+
+/* Filas impares con color de fondo */
+.ventajasDesventajas tr:nth-child(odd) td {
+    background-color: #f9f9f9;
+}
+
+/* Filas pares con otro color de fondo */
+.ventajasDesventajas tr:nth-child(even) td {
+    background-color: #ffffff;
+}
+
+/* Efecto hover en filas */
+.ventajasDesventajas tr:hover td {
+    background-color: #e0f2f1; 
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en celdas individuales */
+.ventajasDesventajas td:hover {
+    color: #038C7F;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Proyecto1, .Proyecto2, .Proyecto3{
+    width: 350px;
+    padding: 10px;
+    color: black;
+    border-radius: 15px;
+    background-color: white;
+    transition: 0.2s;
+}
+
+.Proyecto1:hover,
+.Proyecto2:hover,
+.Proyecto3:hover{
+    background-color: cyan;
+    transform: translateY(-4px);
+}
+
+/* LINK */
+.link-proyecto{
+    display: inline-block;
+    margin-top: 8px;
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 6px 10px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.link-proyecto:hover{
+    background-color: black;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* SKILLS */
+.skill-card{
+    background-color: rgba(255,255,255,0.35);
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 12px;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.skill-card:hover{
+    transform: translateY(-3px);
+    background-color: rgba(255,255,255,0.55);
+}
+
+.skill-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.nivel{
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.12);
+}
+
+.barra{
+    height: 10px;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.18);
+    overflow: hidden;
+}
+
+.progreso{
+    height: 100%;
+    border-radius: 20px;
+    background-color: black;
+    transition: 0.2s;
+}
+
+.w-35{ width: 35%; }
+.w-55{ width: 55%; }
+.w-75{ width: 75%; }
+.w-90{ width: 90%; }
+
+/* FIELDSET */
+fieldset{
+    width: 650px;
+    margin: 20px auto;
+    border-radius: 12px;
+    border: 2px solid rgba(0,0,0,0.25);
+    background-color: rgba(255,255,255,0.35);
+    padding: 12px;
 }
