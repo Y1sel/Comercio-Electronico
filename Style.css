@@ -1,0 +1,36 @@
+body{
+    background-color: #A9D9D0;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#encabezado{
+    background-color: #038C7F;
+    border-radius: 20px;
+    margin: 20px;
+    display: flex;
+    position: center;
+    padding: 40px;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+
+    .foto{
+        border-radius: 120px;
+    }
+    
+    .titulo{
+        font-size: 3rem;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+        color: #F2E7DC;
+    }
+}
+
+.titulosCuerpo{
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+        color: #F2E7DC;
+}
